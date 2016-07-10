@@ -1,6 +1,5 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using TodoApp.Data;
 using TodoApp.Models;
 
 namespace TodoApp.Data

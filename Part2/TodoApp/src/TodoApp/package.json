@@ -4,14 +4,16 @@
       "baseURL": "wwwroot"
     },
     "dependencies": {
-      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-beta.1.2.1",
-      "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-beta.1.2.5",
-      "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.2.5",
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^1.0.0-rc.1.0.1",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.0.0-rc.1.0.0",
+      "aurelia-framework": "npm:aurelia-framework@^1.0.0-rc.1.0.1",
       "bootstrap": "github:twbs/bootstrap@^3.3.6",
-      "moment": "npm:moment@^2.13.0"
+      "moment": "npm:moment@^2.14.1"
     },
     "devDependencies": {
       "typescript": "npm:typescript@^1.6.2"
     }
-  }
+  },
+  "name": "1",
+  "version": "1"
 }

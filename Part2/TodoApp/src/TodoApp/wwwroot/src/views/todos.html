@@ -1,4 +1,4 @@
-﻿<template>
+<template>
     <require from="../../src/components/date-format"></require>
     <div class="panel panel-default">
         <div class="panel-heading">Todo List</div>
@@ -12,7 +12,7 @@
             <tr repeat.for="todoItem of todoItems">
                 <td></td>
                 <td>${todoItem.name}</td>
-                <td>${todoItem.dueDate | dateFormat}</td>
+                <td>${todoItem.dueDate | dateFormat }</td>
                 <td></td>
             </tr>
         </table>

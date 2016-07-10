@@ -7,9 +7,6 @@ System.register(["aurelia-framework", "aurelia-fetch-client"], function(exports_
         else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
-    var __metadata = (this && this.__metadata) || function (k, v) {
-        if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-    };
     var aurelia_framework_1, aurelia_fetch_client_1;
     var Todos;
     return {
@@ -21,26 +18,22 @@ System.register(["aurelia-framework", "aurelia-fetch-client"], function(exports_
                 aurelia_fetch_client_1 = aurelia_fetch_client_1_1;
             }],
         execute: function() {
-            Todos = (function () {
-                function Todos(http) {
+            let Todos = class Todos {
+                constructor(http) {
                     this.http = http;
                 }
-                Todos.prototype.activate = function () {
-                    var _this = this;
-                    return this.http.fetch("http://localhost:51031/api/todos").
-                        then(function (response) { return response.json(); }).then(function (data) {
-                        // this.todoItems = <Array<ITodoItem>>data;
-                        //this.todoItems = <[<ITodoItem>]>data;
-                        _this.todoItems = data;
+                activate() {
+                    return this.http.fetch("http://localhost:53403/api/todos").
+                        then(response => response.json()).then(data => {
+                        this.todoItems = data;
                     });
-                };
-                Todos = __decorate([
-                    aurelia_framework_1.inject(aurelia_fetch_client_1.HttpClient), 
-                    __metadata('design:paramtypes', [Object])
-                ], Todos);
-                return Todos;
-            }());
+                }
+            };
+            Todos = __decorate([
+                aurelia_framework_1.inject(aurelia_fetch_client_1.HttpClient)
+            ], Todos);
             exports_1("Todos", Todos);
         }
     }
 });
+//# sourceMappingURL=todos.js.map
